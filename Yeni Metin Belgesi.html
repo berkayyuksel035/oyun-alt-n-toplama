@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Altın Toplama Oyunu</title>
+
+<style>
+body {
+    background: #222;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+h1 {
+    color: gold;
+}
+
+.oyun {
+    width: 300px;
+    height: 300px;
+    background: #4c9141;
+    margin: 20px auto;
+    border: 5px solid white;
+    position: relative;
+    overflow: hidden;
+}
+
+.oyuncu {
+    width: 35px;
+    height: 35px;
+    background: dodgerblue;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    animation: kos 4s infinite alternate;
+}
+
+.altin {
+    width: 25px;
+    height: 25px;
+    background: gold;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    box-shadow: 0 0 15px yellow;
+}
+
+@keyframes kos {
+    from { left: 20px; }
+    to { left: 240px; }
+}
+
+button {
+    padding: 12px 20px;
+    background: gold;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: orange;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🪙 Altın Toplama</h1>
+<p>Mavi karakter altına ulaşmaya çalışıyor!</p>
+
+<div class="oyun">
+    <div class="oyuncu"></div>
+    <div class="altin"></div>
+</div>
+
+<button onclick="location.reload()">🔄 Yeniden Başlat</button>
+
+<p>İyi oyunlar! 🎮</p>
+
+</body>
+</html>
